@@ -1,4 +1,4 @@
-package com.example.natashagoel.snowman;
+package com.example.natashagoel.com;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.natashagoel.snowman;
+package com.example.natashagoel.com;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

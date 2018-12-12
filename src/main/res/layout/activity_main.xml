@@ -2,55 +2,110 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/welcome"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="295dp"
+        android:layout_height="244dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="177dp"
+        app:srcCompat="@drawable/snowman8" />
+
+    <EditText
+        android:id="@+id/etInputGuess"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorText2"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="127dp"
+        android:layout_toStartOf="@+id/bGuess"
+        android:gravity="center_horizontal"
+        android:hint="Guess a letter"
+        android:textSize="12dp" />
+
+    <Button
+        android:id="@+id/bGuess"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:gravity="center_horizontal"
-        android:text="Welcome to Hangman!"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="103dp"
+        android:layout_marginRight="103dp"
+        android:layout_marginBottom="127dp"
+        android:text="GUESS"
+        android:textColor="@color/colorButton"
+        android:drawableRight="@drawable/ic_done_black_24dp"
+        android:textSize="12dp"
+        android:onClick="guess"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvAmtOfGuesses"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="28dp"
-        android:gravity="center_horizontal"
-        android:text="Snowman Edition" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="104dp"
-        android:text="Button" />
-
-    <TextView
-        android:id="@+id/output"
-        android:layout_width="412dp"
-        android:layout_height="442dp"
+        android:layout_height="31dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="161dp"
-        android:text="OUT" />
+        android:layout_marginTop="491dp"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/colorText2"
+        android:gravity="center_horizontal"
+        android:text="Number of guesses left:  " />
+
+    <Button
+        android:id="@+id/bNewGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="New Game"
+        android:textColor="@color/colorButton" />
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        android:text="Let's play Hangman!"
+        android:textColor="@color/colorText2"
+        android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
+    <TextView
+        android:id="@+id/tvLinefGuesses"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="78dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorText2"
+        android:text="- Click 'New Game' below to begin - "
+        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+    <TextView
+        android:id="@+id/tvListOfPastGuesses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAmtOfGuesses"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-50dp"
+        android:textColor="@color/colorText2"
+        android:gravity="center_horizontal"
+        android:text="Your Guesses" />
+
 
 </RelativeLayout>
