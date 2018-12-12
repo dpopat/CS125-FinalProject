@@ -1,2 +1,2 @@
-# FinalProject-CS125
+# CS125 Final Project
 Hangman Android Application
